@@ -26,4 +26,19 @@ title.addEventListener('dblclick', () => {
     title.style.color = '#17A2B8';
   });
 
-// 
+// add event mouseenter
+const links = document.querySelectorAll('a');
+console.log(links);
+
+links.forEach(link => {
+	link.addEventListener('mouseenter', (event) => {
+		event.target.style.color = '#17A2B8';
+	});
+});
+
+// add event mouseleave
+links.forEach(link => {
+	link.addEventListener('mouseleave', (event) => {
+		event.target.style.color = 'black';
+	});
+});
