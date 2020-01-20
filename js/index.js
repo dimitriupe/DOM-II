@@ -49,3 +49,13 @@ const firstImage = document.querySelectorAll('img');
 window.addEventListener('resize', () => {
   firstImage[0].src = "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1308&q=80"
 })
+
+// add event click
+const subheadings = document.querySelectorAll('h2');
+console.log(subheadings);
+
+subheadings.forEach(h2s => {
+	h2s.addEventListener('click', (event) => {
+		event.target.style.color = '#17A2B8';
+	});
+});
