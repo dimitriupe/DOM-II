@@ -59,3 +59,25 @@ subheadings.forEach(h2s => {
 		event.target.style.color = '#17A2B8';
 	});
 });
+
+// set up code for event propagation / bubbling
+const body = document.querySelector("body");
+body.addEventListener("click", () => {
+  body.style.backgroundColor="papayawhip";
+  console.log("end")
+})
+
+const contentSection = document.querySelector(".content-section");
+contentSection.addEventListener('click', (event) => {
+  contentSection.style.backgroundColor="white";
+  console.log("middle")
+});
+
+const contentDestination = document.querySelector(".content-destination");
+contentDestination.addEventListener('click', (event) => {
+  contentDestination.style.backgroundColor="white";
+  event.stopPropagation();
+  console.log("start")
+});
+
+// stop the navigation items from refreshing the page
