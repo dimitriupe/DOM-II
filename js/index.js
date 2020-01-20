@@ -81,3 +81,10 @@ contentDestination.addEventListener('click', (event) => {
 });
 
 // stop the navigation items from refreshing the page
+const stopLink = document.querySelectorAll(".nav-link");
+stopLink.forEach(stopLinks => {
+	stopLinks.addEventListener('click', (event) => {
+		event.preventDefault();
+		console.log('stopped!');
+	})
+});
